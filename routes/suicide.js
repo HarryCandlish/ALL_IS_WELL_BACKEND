@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const { getSuicide } = require("../db/philosophy");
+const { getSuicide } = require("../db/suicide");
 
 router.get("/", (req, res) => {
   getSuicide()
