@@ -6,6 +6,14 @@ function getProducts(testDb) {
   return db("products").select();
 }
 
+function getOneProduct(id, testDb) {
+  const db = testDb || connection;
+  return db("products")
+    .where("id", id)
+    .first();
+}
+
 module.exports = {
-  getProducts
+  getProducts,
+  getOneProduct
 };
